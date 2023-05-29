@@ -1,5 +1,6 @@
 #![feature(core_intrinsics)]
 
+use std::env;
 use std::intrinsics::type_name;
 use nalgebra::{Matrix3, UniformNorm, Vector3};
 use plotters::prelude::IntoLinspace;
@@ -182,7 +183,12 @@ fn task3() {
 }
 
 fn main() {
-    task1().expect("TODO: panic message");
-    // task2();
-    // task3();
+    let args: Vec<String> = env::args().collect();
+    assert_eq!(args.len(), 2);
+    match args[1].as_str() {
+        "task1" => task1().unwrap(),
+        "task2" => task2(),
+        "task3" => task3(),
+        _ => panic!("unknown task, enter one of task1, task2, task3"),
+    }
 }
