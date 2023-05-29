@@ -3,7 +3,7 @@
 use std::env;
 use std::intrinsics::type_name;
 use nalgebra::{Matrix3, UniformNorm, Vector3};
-use plotters::prelude::IntoLinspace;
+
 use nalab::{task1, task2, task3};
 use nalab::task1::{chebyshev_zeros, CubicSpline, Interpolation, Lagrange, Linear};
 

@@ -1,4 +1,4 @@
-use nalgebra::{Matrix3, SMatrix, SVector, UniformNorm, Vector3};
+use nalgebra::{SMatrix, SVector, UniformNorm};
 
 const ITERATION_THRESHOLD: f64 = 1e-8;
 

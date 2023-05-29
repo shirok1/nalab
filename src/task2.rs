@@ -41,7 +41,7 @@ fn romberg_2(
     partition: usize,
     partition_exp: usize,
     last_line: &[f64],
-    mut this_line: &mut [f64],
+    this_line: &mut [f64],
 ) {
     assert_eq!(last_line.len() + 1, this_line.len());
     this_line[0] = composite_trapezoid(f, zone, partition * 2usize.pow(partition_exp as u32));
